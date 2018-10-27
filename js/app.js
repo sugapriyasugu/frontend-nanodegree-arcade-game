@@ -52,4 +52,22 @@ class Player {
         // a helper we've provided to easily load images
         this.sprite = 'images/char-boy.png';
     }
+
+    update() {
+        //reset to initial position of player, if the player reaches water level
+        if(this.y < 0) {
+            this.x = 202;
+            this.y = 410;
+        }
+        // conditions to check and handle to restrict player from moving off screen
+        if(this.x < 0) {
+            this.x = 0;
+        }
+        if(this.x > 404) {
+            this.x = 404;
+        }
+        if(this.y > 410) {
+            this.y = 410;
+        }
+    }
 }
