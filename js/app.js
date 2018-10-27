@@ -21,6 +21,10 @@ class Enemy {
         // which will ensure the game runs at the same speed for
         // all computers.
         this.x+= (this.speed) * dt;
+        // to prevent enemy moving off screen
+        if (this.x > 505) {
+            this.x = 0;
+        }
     }
 
 }
