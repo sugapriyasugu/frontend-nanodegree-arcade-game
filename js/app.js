@@ -94,3 +94,11 @@ class Player {
         }
     }
 }
+
+// Now instantiate your objects.
+// Place all enemy objects in an array called allEnemies
+// Place the player object in a variable called player
+
+let player = new Player(202, 410, 55);
+let allEnemies = [];
+let enemyPosition = [63, 145, 227];
