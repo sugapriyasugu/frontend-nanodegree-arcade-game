@@ -24,6 +24,14 @@ class Enemy {
         // to prevent enemy moving off screen
         if (this.x > 505) {
             this.x = 0;
+        }   
+        // handles collision with player
+        if (player.x < this.x + 60 &&
+            player.x + 37 > this.x &&
+            player.y < this.y + 25 &&
+            30 + player.y > this.y) {
+            player.x = 202;
+            player.y = 410;
         }
     }
 
