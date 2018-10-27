@@ -38,5 +38,18 @@ class Enemy {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
-
+ 
+}
+// Player class
+class Player {
+    constructor(x, y, speed) {
+        // initial co-ordinates
+        this.x = x;
+        this.y = y;
+        // speed of the player
+        this.speed = speed;
+        // The image/sprite for our player, this uses
+        // a helper we've provided to easily load images
+        this.sprite = 'images/char-boy.png';
+    }
 }
