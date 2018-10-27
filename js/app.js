@@ -115,3 +115,7 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
+enemyPosition.forEach(posY => {
+    allEnemies.push(new Enemy(0, posY, 80+ Math.floor(Math.random() * 512)));
+});
+
