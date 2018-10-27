@@ -75,4 +75,22 @@ class Player {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+
+    // handle input functionality which receives user inputs and moves the player accordingly
+    handleInput(keyPress) {
+        switch (keyPress) {
+            case 'left':
+                this.x -= this.speed + 50;
+                break;
+            case 'up':
+                this.y -= this.speed + 30;
+                break;
+            case 'right':
+                this.x += this.speed + 50;
+                break;
+            case 'down':
+                this.y += this.speed + 30;
+                break;
+        }
+    }
 }
