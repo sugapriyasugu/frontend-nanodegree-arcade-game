@@ -30,8 +30,7 @@ class Enemy {
             player.x + 37 > this.x &&
             player.y < this.y + 25 &&
             30 + player.y > this.y) {
-            player.x = 202;
-            player.y = 410;
+            player.reset();
         }
     }
     // Draw the enemy on the screen, required method for game
@@ -51,6 +50,11 @@ class Player {
         // The image/sprite for our player, this uses
         // a helper we've provided to easily load images
         this.sprite = 'images/char-boy.png';
+    }
+    // resets the player position 
+    reset() {
+        this.x = 202;
+        this.y = 410;
     }
 
     update() {
